@@ -1,0 +1,11 @@
+<%= render partial: 'recipes/header'%>
+
+<h1>編集ページ</h1>
+<div class = "error">
+  <% @article.errors.full_messages.each do |message|%>
+    <%= message %>
+  <% end %>
+</div>
+<br>
+<%= render partial: 'form', locals: {article: @article, url: article_path, method: :patch} %>
+<%= button_to "戻る", articles_path, method: :get %>

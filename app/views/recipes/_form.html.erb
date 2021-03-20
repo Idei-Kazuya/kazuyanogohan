@@ -1,0 +1,40 @@
+<br>
+<br>
+<br>
+<%= form_with model: recipe, local: true do |f| %>
+
+タイトル
+<%= f.text_field :title, value: recipe.title %>
+<br>
+サブタイトル
+<%= f.text_field :subtitle, value: recipe.subtitle %>
+<br>
+画像
+<%= f.file_field :image %>
+<br>
+タグ
+<div class='form-group'>
+  <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+    <div class='form-check'>
+      <%= tag.label class: 'form-check-label' do %>
+        <%= tag.check_box class: 'form-check-input' %>
+        <%= tag.text %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<br>
+材料
+<%= f.text_area :ingredient, value: recipe.ingredient %>
+<br>
+手順
+<%= f.text_area :method, value: recipe.method %>
+<br>
+ポイント
+<%= f.text_area :point, value: recipe.point %>
+<br>
+レシピタイプ
+<%= f.collection_select(:recipe_type_id, RecipeType.all, :id, :name, {}, {class:"recipe-type-select"}) %>
+
+<%= f.submit "送信！"%>
+<% end %>

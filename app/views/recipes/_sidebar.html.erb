@@ -1,0 +1,40 @@
+<h1>search</h1>
+<%= search_form_for Recipe.ransack(params[:q]), url: search_recipes_path do |f| %>
+  <%= f.label :title_or_subtitle_or_ingredient, "Keyword" %>
+  <%= f.search_field :title_or_subtitle_or_ingredient_cont %>
+  <br>
+  <%= f.label :recipe_type_id_eq %>
+  <%= f.radio_button :recipe_type_id_eq, '', {:checked => true} %>指定なし
+  <%= f.radio_button :recipe_type_id_eq, 1 %>オリジナル
+  <%= f.radio_button :recipe_type_id_eq, 2 %>作ってみた
+
+  <%= f.submit "検索" %>
+<% end %>
+
+<h2>recipe category</h2>
+  <ul>
+    <li><%= link_to "和食", search_recipes_path(tag_id: 1) %></li>
+    <li><%= link_to "洋食", search_recipes_path(tag_id: 2) %></li>
+    <li><%= link_to "中華", search_recipes_path(tag_id: 3) %></li>
+    <li><%= link_to "多国籍",search_recipes_path(tag_id: 4) %></li>
+    <br>
+    <li><%= link_to "オードブル", search_recipes_path(tag_id: 5) %></li>
+    <li><%= link_to "スープ", search_recipes_path(tag_id: 6) %></li>
+    <li><%= link_to "メイン", search_recipes_path(tag_id: 7) %></li>
+    <li><%= link_to "パスタ", search_recipes_path(tag_id: 8) %></li>
+    <li><%= link_to "リゾット", search_recipes_path(tag_id: 9) %></li>
+    <li><%= link_to "デザート", search_recipes_path(tag_id: 10) %></li>
+  </ul>
+
+
+<h2>column category</h2>
+  <ul>
+    <li><%= link_to "料理", search_articles_path(article_type_id: 1) %></li>
+    <li>食材</li>
+    <li>道具</li>
+    <li>外食</li>
+    <li>つぶやき</li>
+    <li>その他</li>
+  </ul>
+
+

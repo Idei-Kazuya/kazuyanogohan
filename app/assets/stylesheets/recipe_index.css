@@ -1,0 +1,94 @@
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.recipe {
+  margin: 40px;
+}
+
+.recipe-image-type {
+  position: relative;
+}
+
+.recipe-image-type p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.recipe-title {
+  font-size: 25px;
+  text-decoration: none;
+  color:#220000;
+}
+
+.recipe-favorite-and-cooked-record {
+  display: flex;
+}
+
+.like-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: #808080; 
+  margin-left: 20px;
+  }
+ 
+.unlike-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: #e54747;
+  margin-left: 20px;
+  }
+
+.check-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: #808080; 
+  margin-left: 20px;
+  }
+   
+.uncheck-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 25px;
+  color: green;
+  margin-left: 20px;
+  }
+  
+/* .tag-name {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  margin-left: 30px;
+  padding: 1rem 2rem 1rem 3rem;
+  color: #fff;
+  background: #fa4141;
+}
+
+.tag-name:before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  content: '';
+  border-width: 32px 30px 32px 0;
+  border-style: solid;
+  border-color: transparent #fa4141 transparent transparent;
+}
+
+.tag-name:after {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: -10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+} */

@@ -1,0 +1,81 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  background-color: #336666;
+  width: 95%;
+  height: 70px;
+  line-height: 70px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  font-weight: bold;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-item {
+  color: white;
+}
+
+.search-button {
+  height: 20px;
+  width: 20px;
+}
+
+.header-name {
+  display: flex;
+  line-height: 70px;
+  color: white;
+}
+
+/* .hello {
+  font-size: 15px;
+}
+
+.sann {
+  font-size: 15px;
+}
+
+.current-user {
+  font-size: 20px;
+} */
+
+.mypage {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+
+.slash {
+  font-size: 25px;
+  color: white;
+  padding: 0px 10px;
+}
+
+.logout {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+
+.login {
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.home-link {
+  color: white;
+  text-decoration: none;
+}
+
+.recipe-link {
+  color: white;
+  text-decoration: none;
+}
+
+.column-link {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,2 @@
+module CookedRecordsHelper
+end

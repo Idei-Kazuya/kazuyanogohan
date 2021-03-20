@@ -1,0 +1,32 @@
+<%= render partial: 'recipes/header'%>
+
+<div class ="container">
+  <div class = "main-wrapper">
+
+        <div class = "article-show">
+            <div class = "article-title-show">   
+            <%= @article.title %>
+            </div>
+            
+            <div class = "article-image-type-show">
+                <%= image_tag @article.image.variant(resize:'600x600').processed if @article.image.attached? %>
+                <br>
+                <p><%= @article.article_type.name %></p>
+            </div> 
+            
+            <div class = "article-text">
+            <%= @article.text %>
+            </div>
+        </div>
+  </div>
+
+  <div class="sidebar">
+    <%= render partial: 'recipes/sidebar' %>
+  </div>
+</div>
+
+<ul>
+    <%= button_to "編集", "/articles/#{@article.id}/edit", method: :get %>
+    <%= button_to "削除", "/articles/#{@article.id}", method: :delete %>
+    <%= button_to "戻る", articles_path, method: :get %>
+</ul>

@@ -1,0 +1,26 @@
+.recipe-show {
+  margin-left: 200px;
+}
+
+.recipe-title-show {
+  font-size: 35px;
+  color:#220000;
+}
+
+
+.recipe-image-type-show {
+  position: relative;
+  width: 600px;
+}
+
+.recipe-image-type-show p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.ingredient {
+  border-top: 1px solid;
+}

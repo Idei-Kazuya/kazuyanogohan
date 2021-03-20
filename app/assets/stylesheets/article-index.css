@@ -1,0 +1,27 @@
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.article {
+  margin: 40px;
+}
+
+.article-image-type {
+  position: relative;
+}
+
+.article-image-type p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.article-title {
+  font-size: 25px;
+  text-decoration: none;
+  color:#220000;
+}

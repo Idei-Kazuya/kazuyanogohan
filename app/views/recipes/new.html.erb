@@ -1,0 +1,10 @@
+<%= render partial: 'recipes/header'%>
+
+<h1>新規投稿画面</h1>
+ <% @recipe.errors.full_messages.each do |message|%>
+  <%= message %>
+ <% end %>
+
+<%= render partial: 'form', locals: {recipe: @recipe, model: @recipe} %>
+
+<%= button_to "レシピ一覧", recipes_path, method: :get %>

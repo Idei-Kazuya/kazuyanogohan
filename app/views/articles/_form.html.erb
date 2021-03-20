@@ -1,0 +1,20 @@
+<br>
+<br>
+<br>
+
+<%= form_with model: article, local: true do |f| %>
+タイトル
+<%= f.text_field :title, value: article.title %>
+<br>
+画像
+<%= f.file_field :image %>
+<br>
+テキスト
+<%= f.text_area :text, value: article.text %>
+<br>
+コラムタイプ
+<%= f.collection_select(:article_type_id, ArticleType.all, :id, :name, {}, {class:"article-type-select"}) %>
+
+<br>
+<%= f.submit "送信！"%>
+<% end %>

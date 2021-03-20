@@ -1,0 +1,26 @@
+.new {
+  margin-left: 200px;
+}
+
+.recipe-new {
+  margin-left: 200px;
+}
+
+.recipe-title-new {
+  font-size: 35px;
+  color:#220000;
+  text-decoration: none;
+}
+
+.recipe-image-type-new {
+  position: relative;
+  width: 600px;
+}
+
+.recipe-image-type-new p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-weight: bold;
+}
