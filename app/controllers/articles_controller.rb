@@ -41,8 +41,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
-      # @article_type = ArticleType.find(params[:article_type_id])
-      # @articles = @article_type.articles.all
+      @articles = Article.where(article_type_id: params[:article_type_id])
   end
 
   private

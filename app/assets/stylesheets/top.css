@@ -12,6 +12,10 @@
   text-decoration: none;
 }
 
+.recipe-image {
+  border-radius: 10px;
+}
+
 .recipe-image-type-new {
   position: relative;
   width: 600px;
@@ -23,4 +27,8 @@
   right: 0;
   color: white;
   font-weight: bold;
+}
+
+.selected {
+  opacity: 0.6;
 }

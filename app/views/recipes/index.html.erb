@@ -5,57 +5,51 @@
 
     <div class = "recipe-list">
       <% @recipes.each do |recipe| %>
-        <div class = "recipe">
-
-          <div class = "recipe-image-type">
-            <%= image_tag recipe.image.variant(resize:'400x400').processed if recipe.image.attached? %>
-            <p><%= recipe.recipe_type.name %></p>
-          </div>
-
-          <%= link_to recipe.title, "/recipes/#{recipe.id}", method: :get, class: "recipe-title" %>
-          <br>
-
-          <div class = "recipe-subtitle">
-            <%= recipe.subtitle %>
+        <%= link_to recipe_path(recipe.id) do %>
+          <div class = "recipe content">
+            <div class = "recipe-image-type">
+              <%= image_tag recipe.image.variant(resize:'400x400').processed if recipe.image.attached? %>
+              <p><%= recipe.recipe_type.name %></p>
+            </div>
+            <h1 class="recipe-title-new"><%= recipe.title %></h1>
             <br>
-          </div>
-
-          <div class = "recipe-favorite-and-cooked-record">
-              <div class = "recipe-favorite">
+            <div class = "recipe-subtitle">
+              <%= recipe.subtitle %>
+              <br>
+            </div>
+            <div class = "recipe-favorite">
               <% if recipe.favorite_by?(current_user) %>
-                    <%= link_to recipe_favorites_path(recipe_id: recipe.id), method: :delete do %>
-                      <i class="fa fa-heart fa-2x unlike-btn" aria-hidden="true"></i>
-                    <% end %>
-                <% else %>
-                    <%= link_to recipe_favorites_path(recipe_id: recipe.id), method: :post do %>
-                      <i class="fa fa-heart fa-2x like-btn" aria-hidden="true"></i>
-                    <% end %>
+                <%= link_to recipe_favorites_path(recipe_id: recipe.id), method: :delete, class: "fav-btn" do %>
+                  <i class="fa fa-heart fa-2x unlike-btn" aria-hidden="true"></i>
+                  <p>お気に入り登録</p>
                 <% end %>
-              </div>
-
-              <div class = "recipe-cooked-record">
-                <% if recipe.cooked_record_by?(current_user) %>
-                    <%= link_to recipe_cooked_records_path(recipe_id: recipe.id), method: :delete do %>
-                      <i class="fa fa-calendar-check-o fa-2x uncheck-btn" aria-hidden="true"></i>
-                    <% end %>
-                <% else %>
-                    <%= link_to recipe_cooked_records_path(recipe_id: recipe.id), method: :post do %>
-                      <i class="fa fa-calendar-check-o fa-2x check-btn" aria-hidden="true"></i>
-                    <% end %>
+              <% else %>
+                <%= link_to recipe_favorites_path(recipe_id: recipe.id), method: :post do %>
+                  <i class="fa fa-heart fa-2x like-btn" aria-hidden="true"></i>
                 <% end %>
-                <br>
-              </div>
+              <% end %>
+            </div>
+            <div class = "recipe-cooked-record">
+              <% if recipe.cooked_record_by?(current_user) %>
+                  <%= link_to recipe_cooked_records_path(recipe_id: recipe.id), method: :delete do %>
+                    <i class="fa fa-calendar-check-o fa-2x uncheck-btn" aria-hidden="true"></i>
+                  <% end %>
+              <% else %>
+                  <%= link_to recipe_cooked_records_path(recipe_id: recipe.id), method: :post do %>
+                    <i class="fa fa-calendar-check-o fa-2x check-btn" aria-hidden="true"></i>
+                  <% end %>
+              <% end %>
+              <br>
+            </div>
+            <div class = "recipe-tag">
+              <% recipe.tags.each do |tag| %>
+                <span class= 'tag-name'><%= tag.name %></span>
+              <% end %>
+              <br>
+              <br>
+            </div>         
           </div>
-
-          <div class = "recipe-tag">
-            <% recipe.tags.each do |tag| %>
-              <span class= 'tag-name'><%= tag.name %></span>
-            <% end %>
-            <br>
-            <br>
-          </div>
-          
-        </div>
+        <% end %>
       <% end %>
     </div>
     <%= link_to "新規投稿", "/recipes/new"%>

@@ -4,19 +4,20 @@
   <div class = "main-wrapper">
     <div class = "new">NEW!!</div>
       <% @recipes.each do |recipe| %>
-        <div class = "recipe-new">
-          <%= link_to recipe.title, "/recipes/#{recipe.id}", method: :get , class: "recipe-title-new" %>
-          <div class = "recipe-image-type-new">
-            <%= image_tag recipe.image.variant(resize:'600x600').processed if recipe.image.attached? %>
-            <p><%= recipe.recipe_type.name %></p>
+        <%= link_to recipe_path(recipe.id) do %>
+          <div class = "recipe-new content">
+            <h1 class="recipe-title-new"><%= recipe.title %></h1>
+            <div class = "recipe-image-type-new">
+              <%= image_tag recipe.image.variant(resize:'600x600').processed , class: "recipe-image" if recipe.image.attached? %>
+              <p><%= recipe.recipe_type.name %></p>
+            </div>
+            <% recipe.tags.each do |tag| %>
+              <span class= 'tag-name'><%= tag.name %></span>
+            <% end %>
+            <br>
+            <%= recipe.subtitle %>   
           </div>
-          
-          <% recipe.tags.each do |tag| %>
-            <span class= 'tag-name'><%= tag.name %></span>
-          <% end %>
-          <br>
-          <%= recipe.subtitle %>
-        </div>
+        <% end %>
       <% end %>
   </div>
 

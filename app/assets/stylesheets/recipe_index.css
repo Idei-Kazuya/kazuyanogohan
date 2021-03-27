@@ -30,6 +30,11 @@
   display: flex;
 }
 
+.recipe-favorite {
+  border: solid 3px black;
+  border-radius: 4px;
+}
+
 .like-btn {
   width: 25px;
   height: 30px;
@@ -92,3 +97,7 @@
   border-radius: 50%;
   background: #fff;
 } */
+
+.fav-btn {
+  display: flex;
+}
