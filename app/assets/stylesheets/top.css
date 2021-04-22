@@ -32,3 +32,8 @@
 .selected {
   opacity: 0.6;
 }
+
+.recipe-subtitle-new {
+  font-size: 20px;
+  text-decoration: none;
+}

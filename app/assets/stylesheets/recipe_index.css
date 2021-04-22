@@ -20,6 +20,10 @@
   font-weight: bold;
 }
 
+h1.recipe-title-new {
+  font-size: 20px;
+}
+
 .recipe-title {
   font-size: 25px;
   text-decoration: none;
@@ -98,6 +102,6 @@
   background: #fff;
 } */
 
-.fav-btn {
+/* .fav-btn {
   display: flex;
-}
+} */
