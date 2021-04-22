@@ -2,26 +2,26 @@
   margin-left: 200px;
 }
 
-.recipe-new {
+.show {
   margin-left: 200px;
 }
 
-.recipe-title-new {
+.show-title {
   font-size: 35px;
   color:#220000;
   text-decoration: none;
 }
 
-.recipe-image {
+.show-image {
   border-radius: 10px;
 }
 
-.recipe-image-type-new {
+.show-image-type {
   position: relative;
   width: 600px;
 }
 
-.recipe-image-type-new p {
+.show-image-type p {
   position: absolute;
   top: 0;
   right: 0;
@@ -33,7 +33,7 @@
   opacity: 0.6;
 }
 
-.recipe-subtitle-new {
+.show-subtitle {
   font-size: 20px;
   text-decoration: none;
 }

@@ -2,15 +2,17 @@
 
 <div class ="container">
   <div class = "main-wrapper">    
-      <div class = "article-list">
+      <div class = "list">
         <% @articles.each do |article| %> 
-          <div class ="article">
-            <div class = "article-image-type">
-              <%= image_tag article.image.variant(resize:'400x400').processed if article.image.attached? %>
-              <p><%= article.article_type.name %></p>
+          <%= link_to article_path(article.id) do %>
+            <div class ="index content">
+              <div class = "index-image-type">
+                <%= image_tag article.image.variant(resize:'400x400').processed, class: "index-image" if article.image.attached? %>
+                <p><%= article.article_type.name %></p>
+              </div>
+              <h1 class="index-title"><%= article.title %></h1>
             </div>
-            <%= link_to article.title, "/articles/#{article.id}", method: :get, class: "article-title"%>
-          </div>
+          <% end %>
         <% end %>
       </div>
       <%= link_to "新規投稿", "/articles/new"%>

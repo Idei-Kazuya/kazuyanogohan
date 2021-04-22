@@ -1,25 +1,3 @@
-.article-show {
-  margin-left: 200px;
-}
-
-.article-title-show {
-  font-size: 35px;
-  color:#220000;
-}
-
-
-.article-image-type-show {
-  position: relative;
-  width: 600px;
-}
-
-.article-image-type-show p {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  font-weight: bold;
-}
 .article-text {
   font-size: 22px;
 }

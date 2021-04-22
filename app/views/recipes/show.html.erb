@@ -3,17 +3,17 @@
 <div class ="container">
   <div class = "main-wrapper">
 
-    <div class = "recipe-show">
-        <div class = "recipe-title-show">
+    <div class = "show">
+        <div class = "show-title">
           <%= @recipe.title %>
         </div>
 
-        <div class = "recipe-image-type-show">
-          <%= image_tag @recipe.image.variant(resize:'600x600').processed if @recipe.image.attached? %>
+        <div class = "show-image-type">
+          <%= image_tag @recipe.image.variant(resize:'600x600').processed, class: "show-image" if @recipe.image.attached? %>
           <p><%= @recipe.recipe_type.name %></p>
         </div>
 
-        <div class = "recipe-tag">
+        <div class = "show-tag">
           <% @recipe.tags.each do |tag| %>
               <span class= 'tag-name'><%= tag.name %></span>
           <% end %>
@@ -45,7 +45,10 @@
               <% end %>
             </div>
         </div>    
-        <%= @recipe.subtitle %>
+
+        <<div class = "show-subtitle">>
+          <%= @recipe.subtitle %>
+        </div>
         <br>
         <%# <%= @recipe.created_at.strftime('%Y年 %m月 %d日') %> 
         <br> 

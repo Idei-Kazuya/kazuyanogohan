@@ -3,13 +3,13 @@
 <div class ="container">
   <div class = "main-wrapper">
 
-        <div class = "article-show">
-            <div class = "article-title-show">   
+        <div class = "show">
+            <div class = "show-title">   
             <%= @article.title %>
             </div>
             
-            <div class = "article-image-type-show">
-                <%= image_tag @article.image.variant(resize:'600x600').processed if @article.image.attached? %>
+            <div class = "show-image-type">
+                <%= image_tag @article.image.variant(resize:'600x600').processed, class: "show-image" if @article.image.attached? %>
                 <br>
                 <p><%= @article.article_type.name %></p>
             </div> 

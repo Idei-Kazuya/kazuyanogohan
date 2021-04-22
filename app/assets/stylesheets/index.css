@@ -1,18 +1,22 @@
-.recipe-list {
+.list {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
-.recipe {
+.index {
   margin: 40px;
 }
 
-.recipe-image-type {
+.index-image {
+  border-radius: 10px;
+}
+
+.index-image-type {
   position: relative;
 }
 
-.recipe-image-type p {
+.index-image-type p {
   position: absolute;
   top: 0;
   right: 0;
@@ -20,11 +24,7 @@
   font-weight: bold;
 }
 
-h1.recipe-title-new {
-  font-size: 20px;
-}
-
-.recipe-title {
+ h1.index-title {
   font-size: 25px;
   text-decoration: none;
   color:#220000;
