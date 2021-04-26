@@ -54,13 +54,26 @@
         <br> 
         材料
         <br>
-        <%= @recipe.ingredient, class: "ingredient" %>
+        <table>
+          <tr><!-- 行1（見出し）-->
+            <th>食材</th> <th>分量</th>
+          </tr>
+          <% @recipe.ingredient.split("\r\n").each do |ingredient|%>
+            <tr>
+              <% ingredient.squish.split(" ").each do |igd|%>
+                <td><%= igd %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+
         <br>
         作り方
         <br>
         <%= simple_format(@recipe.method) %>
 
-        
+
         <br>
         ポイント
         <br>

@@ -116,10 +116,12 @@
 }
 
 /* 以下recipeのshow */
-.ingredient {
-  border-top: 1px solid;
+table {
+  border-collapse: collapse;
 }
-
+th, td {
+  border: 1px solid #333;
+}
 
 
 /* 以下articleのshow */
