@@ -1,23 +1,21 @@
-.header {
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  background-color: #336666;
-  width: 95%;
-  height: 70px;
-  line-height: 70px;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  font-weight: bold;
-  font-family: 'Amatic SC', cursive;
-  font-size: 40px;
-  display: flex;
-  justify-content: space-between;
+.second-header {
+  display: none;
 }
 
 @media (max-width: 1000px) {
-  .header {
-    display: none;
+  .second-header {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: #336666;
+    width: 95%;
+    height: 70px;
+    padding: 0 2.5%;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

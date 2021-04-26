@@ -54,11 +54,13 @@
         <br> 
         材料
         <br>
-        <%= simple_format(@recipe.ingredient, class: "ingredient") %>
+        <%= @recipe.ingredient, class: "ingredient" %>
         <br>
         作り方
         <br>
         <%= simple_format(@recipe.method) %>
+
+        
         <br>
         ポイント
         <br>
