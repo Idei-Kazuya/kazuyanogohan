@@ -5,49 +5,19 @@
 
     <div class = "list">
       <% @recipes.each do |recipe| %>
-        <%= link_to recipe_path(recipe.id) do %>
+        <%= link_to recipe_path(recipe.id), class: "no-line" do %>
           <div class = "index content">
             <div class = "index-image-type">
               <%= image_tag recipe.image.variant(resize:'400x400').processed, class: "index-image" if recipe.image.attached? %>
               <p><%= recipe.recipe_type.name %></p>
             </div>
             <h1 class="index-title"><%= recipe.title %></h1>
-            <br>
-            <div class = "index-subtitle">
-              <%= recipe.subtitle %>
-              <br>
-            </div>
-            <div class = "recipe-favorite">
-              <% if recipe.favorite_by?(current_user) %>
-                <%= link_to recipe_favorites_path(recipe_id: recipe.id), method: :delete, class: "fav-btn" do %>
-                  <i class="fa fa-heart fa-2x unlike-btn" aria-hidden="true"></i>
-                  <p>お気に入り登録</p>
-                <% end %>
-              <% else %>
-                <%= link_to recipe_favorites_path(recipe_id: recipe.id), method: :post do %>
-                  <i class="fa fa-heart fa-2x like-btn" aria-hidden="true"></i>
-                <% end %>
-              <% end %>
-            </div>
-            <div class = "recipe-cooked-record">
-              <% if recipe.cooked_record_by?(current_user) %>
-                  <%= link_to recipe_cooked_records_path(recipe_id: recipe.id), method: :delete do %>
-                    <i class="fa fa-calendar-check-o fa-2x uncheck-btn" aria-hidden="true"></i>
-                  <% end %>
-              <% else %>
-                  <%= link_to recipe_cooked_records_path(recipe_id: recipe.id), method: :post do %>
-                    <i class="fa fa-calendar-check-o fa-2x check-btn" aria-hidden="true"></i>
-                  <% end %>
-              <% end %>
-              <br>
-            </div>
             <div class = "index-tag">
               <% recipe.tags.each do |tag| %>
                 <span class= 'tag-name'><%= tag.name %></span>
               <% end %>
-              <br>
-              <br>
-            </div>         
+            </div>
+            <div class = "index-subtitle"><%= recipe.subtitle %></div>
           </div>
         <% end %>
       <% end %>

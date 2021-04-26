@@ -4,20 +4,24 @@
   <div class = "main-wrapper">
     <div class = "new">NEW!!</div>
       <% @recipes.each do |recipe| %>
-        <%= link_to recipe_path(recipe.id) do %>
+        <%= link_to recipe_path(recipe.id), class: "no-line" do %>
           <div class = "show content">
-            <h1 class="show-title"><%= recipe.title %></h1>
+            <h1 class = "show-title"><%= recipe.title %></h1>
             <div class = "show-image-type">
               <%= image_tag recipe.image.variant(resize:'600x600').processed , class: "show-image" if recipe.image.attached? %>
               <p><%= recipe.recipe_type.name %></p>
             </div>
-            <% recipe.tags.each do |tag| %>
-              <span class= 'tag-name'><%= tag.name %></span>
-            <% end %>
-            <br>
+
+            <div class = "show-tag">
+              <% recipe.tags.each do |tag| %>
+                <span class= 'tag-name'><%= tag.name %></span>
+              <% end %>
+            </div>
+
             <div class = "show-subtitle">
               <%= recipe.subtitle %>   
             </div>
+
           </div>
         <% end %>
       <% end %>

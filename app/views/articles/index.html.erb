@@ -4,7 +4,7 @@
   <div class = "main-wrapper">    
       <div class = "list">
         <% @articles.each do |article| %> 
-          <%= link_to article_path(article.id) do %>
+          <%= link_to article_path(article.id), class: "no-line" do %>
             <div class ="index content">
               <div class = "index-image-type">
                 <%= image_tag article.image.variant(resize:'400x400').processed, class: "index-image" if article.image.attached? %>

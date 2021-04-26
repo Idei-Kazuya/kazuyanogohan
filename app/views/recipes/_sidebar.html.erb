@@ -1,4 +1,4 @@
-<h1>search</h1>
+<div class="search-title">search</div>
 <%= search_form_for Recipe.ransack(params[:q]), url: search_recipes_path do |f| %>
   <%= f.label :title_or_subtitle_or_ingredient, "Keyword" %>
   <%= f.search_field :title_or_subtitle_or_ingredient_cont %>

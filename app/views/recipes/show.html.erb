@@ -21,32 +21,32 @@
         </div>
         
         <div class = "recipe-favorite-and-cooked-record">
-            <div class = "recipe-favorite">
+            <div class = "recipe-symbol">
               <% if @recipe.favorite_by?(current_user) %>
-                    <%= link_to recipe_favorites_path(recipe_id: @recipe.id), method: :delete do %>
-                      <i class="fa fa-heart fa-2x unlike-btn" aria-hidden="true"></i>
+                    <%= link_to recipe_favorites_path(recipe_id: @recipe.id), class: "no-line", method: :delete do %>
+                      <span class="fa fa-heart fa-1x unlike-btn" aria-hidden="true"></span><span class="margin-10">お気に入り</span>
                     <% end %>
               <% else %>
-                    <%= link_to recipe_favorites_path(recipe_id: @recipe.id), method: :post do %>
-                      <i class="fa fa-heart fa-2x like-btn" aria-hidden="true"></i>
+                    <%= link_to recipe_favorites_path(recipe_id: @recipe.id), class: "no-line", method: :post do %>
+                      <span class="fa fa-heart fa-1x like-btn" aria-hidden="true"></span><span class="margin-10">お気に入り</span>
                     <% end %>
               <% end %>
             </div>
 
-            <div class = "recipe-cooked-record">
+            <div class = "recipe-symbol">
               <% if @recipe.cooked_record_by?(current_user) %>
-                    <%= link_to recipe_cooked_records_path(recipe_id: @recipe.id), method: :delete do %>
-                      <i class="fa fa-calendar-check-o fa-2x uncheck-btn" aria-hidden="true"></i>
+                    <%= link_to recipe_cooked_records_path(recipe_id: @recipe.id), class: "no-line", method: :delete do %>
+                      <span class="fa fa-calendar-check-o fa-1x uncheck-btn" aria-hidden="true"></span><span class="margin-10">作ったログ</span>
                     <% end %>
               <% else %>
-                    <%= link_to recipe_cooked_records_path(recipe_id: @recipe.id), method: :post do %>
-                      <i class="fa fa-calendar-check-o fa-2x check-btn" aria-hidden="true"></i>
+                    <%= link_to recipe_cooked_records_path(recipe_id: @recipe.id), class: "no-line", method: :post do %>
+                      <span class="fa fa-calendar-check-o fa-1x check-btn" aria-hidden="true"></span><span class="margin-10">作ったログ</span>
                     <% end %>
               <% end %>
             </div>
         </div>    
 
-        <<div class = "show-subtitle">>
+        <div class = "show-subtitle">
           <%= @recipe.subtitle %>
         </div>
         <br>

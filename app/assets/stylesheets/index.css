@@ -9,7 +9,7 @@
 }
 
 .index-image {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .index-image-type {
@@ -18,10 +18,14 @@
 
 .index-image-type p {
   position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
+  top: 5px;
+  right: 5px;
+  color:#336666;
   font-weight: bold;
+  font-size: 15px;
+  background-color:white ;
+  padding: 0px 5px;
+  border-radius: 5px;
 }
 
  h1.index-title {
@@ -30,47 +34,17 @@
   color:#220000;
 }
 
-.recipe-favorite-and-cooked-record {
-  display: flex;
+.index-subtitle {
+  font-size: 15px;
+  text-decoration: none;
+  color:#220000;
 }
 
-.recipe-favorite {
-  border: solid 3px black;
-  border-radius: 4px;
+.index-tag{
+  color:#220000;
+  float: right;
 }
 
-.like-btn {
-  width: 25px;
-  height: 30px;
-  font-size: 25px;
-  color: #808080; 
-  margin-left: 20px;
-  }
- 
-.unlike-btn {
-  width: 25px;
-  height: 30px;
-  font-size: 25px;
-  color: #e54747;
-  margin-left: 20px;
-  }
-
-.check-btn {
-  width: 25px;
-  height: 30px;
-  font-size: 25px;
-  color: #808080; 
-  margin-left: 20px;
-  }
-   
-.uncheck-btn {
-  width: 25px;
-  height: 30px;
-  font-size: 25px;
-  color: green;
-  margin-left: 20px;
-  }
-  
 /* .tag-name {
   position: relative;
   display: inline-block;

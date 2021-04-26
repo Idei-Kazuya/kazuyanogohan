@@ -4,11 +4,16 @@
 
 .show {
   margin-left: 200px;
+  width: 600px;
 }
 
 .show-title {
   font-size: 35px;
   color:#220000;
+  text-decoration: none;
+}
+
+.no-line {
   text-decoration: none;
 }
 
@@ -18,22 +23,106 @@
 
 .show-image-type {
   position: relative;
-  width: 600px;
 }
 
 .show-image-type p {
   position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
+  top: 10px;
+  right: 10px;
+  color: #336666;
   font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.show-tag {
+  font-size: 15px;
+  text-decoration: none;
+  float: right;
+  margin-top: 10px;
+}
+
+.tag-name {
+  border: 2px solid #596969;
+  background-color:#596969;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
 }
 
 .selected {
   opacity: 0.6;
+  color:#220000;
+  text-decoration: none;
 }
 
 .show-subtitle {
   font-size: 20px;
+  color:#220000;
   text-decoration: none;
+  margin-top: 10px;
+}
+
+.recipe-favorite-and-cooked-record {
+  display: flex;
+}
+
+.recipe-symbol {
+  font-size: 15px;
+  border: solid 2px #336666;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.like-btn {
+  font-size: 25px;
+  color: #808080; 
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 
+.unlike-btn {
+  font-size: 25px;
+  color: #e54747;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.check-btn {
+  font-size: 25px;
+  color: #808080; 
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+   
+.uncheck-btn {
+  font-size: 25px;
+  color:#336699;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  
+.margin-10 {
+  margin: 10px;
+  color:#220000;
+}
+
+/* 以下recipeのshow */
+.ingredient {
+  border-top: 1px solid;
+}
+
+
+
+/* 以下articleのshow */
+.article-text {
+  font-size: 22px;
 }
